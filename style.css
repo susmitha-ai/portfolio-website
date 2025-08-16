@@ -1,0 +1,161 @@
+/* Global Body */
+body {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: #2d004d; /* default deep purple */
+  background: linear-gradient(135deg, #f3e8ff, #ffffff); /* lavender gradient */
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+.elegant-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #6A0DAD !important; 
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+.elegant-brand:hover { color: #ff6f61 !important; letter-spacing: 2px; }
+
+.nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #6A0DAD;
+  transition: width 0.3s ease;
+}
+.nav-link:hover { color: #6A0DAD !important; }
+.nav-link:hover::after { width: 100%; }
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h1 { color: #000; } /* "Hi, I'm" black for readability */
+.hero h1 span { color: #ff6f61; font-weight: 800; }
+.hero p { color: #2d004d; } /* subtitle dark purple */
+
+/* Profile Picture */
+.profile-pic {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border: 6px solid #6A0DAD;
+  border-radius: 50%;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-pic:hover { transform: scale(1.05); box-shadow: 0 0 25px rgba(106, 13, 173, 0.5); }
+
+/* Buttons */
+.btn-warning { background-color: #ff6f61; border: none; color: #fff; }
+.btn-warning:hover { background-color: #e0557a; }
+.btn-outline-light { border: 2px solid #ff6f61; color: #ff6f61; }
+.btn-outline-light:hover { background-color: #ff6f61; color: #fff; }
+.btn-primary { background-color: #6A0DAD; border: none; color: #fff; }
+.btn-primary:hover { background-color: #5a0c99; }
+.btn-dark { background-color: #333; color: #fff; border: none; }
+.btn-dark:hover { background-color: #1a1a1a; }
+
+/* Section Styles */
+section {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(243, 232, 255, 0.95); /* subtle white overlay to improve readability */
+}
+section h2 { color: #2d004d; font-weight: bold; margin-bottom: 30px; }
+section p, section li, section a { color: #2d004d; } /* dark purple for text */
+section a:hover { color: #ff6f61; }
+
+/* Skills - Colorful Tags */
+.skill-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 5px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.skill-tag.blue   { background: #6fa8dc; }
+.skill-tag.green  { background: #93c47d; }
+.skill-tag.yellow { background: #ffd966; color: #333; }
+.skill-tag.orange { background: #f6b26b; }
+.skill-tag.pink   { background: #ea9999; }
+.skill-tag.purple { background: #b4a7d6; }
+.skill-tag.teal   { background: #76a5af; }
+.skill-tag:hover { transform: scale(1.08); box-shadow: 0px 4px 8px rgba(0,0,0,0.2); }
+/* About Section Image */
+#about img {
+  width: 100%;       /* responsive */
+  max-width: 400px;  /* reduced size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Experience Timeline */
+.timeline { list-style: none; padding: 0; max-width: 700px; margin: 0 auto; }
+.timeline li {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 3px solid #ff6f61;
+  background: rgba(255, 247, 247, 0.95);
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+  color: #2d004d;
+}
+.timeline li::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #ff6f61;
+  border-radius: 50%;
+  position: absolute;
+  left: -7px;
+  top: 20px;
+}
+
+/* Footer */
+footer {
+  background: rgba(243, 232, 255, 0.95);
+  color: #000000;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
